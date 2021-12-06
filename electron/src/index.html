@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src-elem 'self'; connect-src *">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src-elem 'self'; connect-src *">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>JSON Viewer</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row gy-2">
+        <div class="col">
+          <input class="form-control" type="text" placeholder="Enter URL" id="urlField">
+        </div>
+        <div class="col-md-auto">
+          <button type="button" class="btn btn-primary" id="loadButton">
+            Load JSON
+          </button>
+        </div>
+
+        <div class="col-md-12">
+          <label for="jsonTextarea" class="form-label">Loaded JSON</label>
+          <textarea class="form-control" id="jsonTextarea" rows="10"></textarea>
+        </div>
+        <div class="col-md-12 d-grid gap-2">
+          <button type="button" class="btn btn-primary" id="saveButton">
+            Save JSON
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
